@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <style>
+      .hero {
+        background-color: navy;
+      }
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header-logo img {
+        max-height: 60px; /* Increased by 20% */
+      }
+      .title {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-weight: bold;
+        color: navy;
+      }
+      hr {
+        border: 1px solid navy;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .add-button-container {
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero is-bold">
+      <div class="hero-body">
+        <div class="container header-container">
+          <h1 class="title">JOBS VERIFICATION FORM</h1>
+          <div class="header-logo">
+            <img src="inmark_logo.webp" alt="Inmark Logo" style="max-height: 120px;" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="subtitle">General Information</h2>
+      </div>
+    </section>
+
+    <form id="form" class="container m-4 pl-4" method="POST">
+      <div class="field">
+        <label class="label">JOB #</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="JOB #"
+            placeholder="Job #"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">FG P#</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="FG P#"
+            placeholder="FG Part #"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">PROD. AREA</label>
+        <div class="control">
+          <div class="select">
+            <select name="PROD. AREA" required>
+              <option value="Line-1">Line-1</option>
+              <option value="Line-2">Line-2</option>
+              <option value="Line-3">Line-3</option>
+              <option value="PCM">PCM</option>
+              <option value="Tables">Tables</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">PRINTED DATE</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            name="PRINTED DATE"
+            placeholder="Printed Date"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">M. HANDLER</label>
+        <div class="control">
+          <div class="select">
+            <select name="M. HANDLER" required>
+              <option value="Edelman">Edelman</option>
+              <option value="Aroldo">Aroldo</option>
+              <option value="Marquiz">Marquiz</option>
+              <option value="Alejandro">Alejandro</option>
+              <option value="Juan">Juan</option>
+              <option value="Terrance">Terrance</option>
+              <option value="Jhonatan">Jhonatan</option>
+              <option value="Fredy">Fredy</option>
+              <option value="Valeria">Valeria</option>
+              <option value="Don Carlos">Don Carlos</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">START PULLING DATE</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            name="START PULLING DATE"
+            placeholder="Start Pulling Date"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">START PULLING TIME</label>
+        <div class="control">
+          <input
+            class="input"
+            type="time"
+            name="START PULLING TIME"
+            placeholder="Start Pulling Time"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">FINISH PULLING DATE</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            name="FINISH PULLING DATE"
+            placeholder="Finish Pulling Date"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">FINISH PULLING TIME</label>
+        <div class="control">
+          <input
+            class="input"
+            type="time"
+            name="FINISH PULLING TIME"
+            placeholder="Finish Pulling Time"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">VERIFIED BY</label>
+        <div class="control">
+          <div class="select">
+            <select name="VERIFIED BY" required>
+              <option value="Angel">Angel</option>
+              <option value="Noemi">Noemi</option>
+              <option value="Alejandro">Alejandro</option>
+              <option value="Juan">Juan</option>
+              <option value="Terrance">Terrance</option>
+              <option value="Valeria">Valeria</option>
+              <option value="Ernesto">Ernesto</option>
+              <option value="Carolina">Carolina</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">START VERIFYING DATE</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            name="START VERIFYING DATE"
+            placeholder="Start Verifying Date"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">START VERIFYING TIME</label>
+        <div class="control">
+          <input
+            class="input"
+            type="time"
+            name="START VERIFYING TIME"
+            placeholder="Start Verifying Time"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">FINISH VERIFYING DATE</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            name="FINISH VERIFYING DATE"
+            placeholder="Finish Verifying Date"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">FINISH VERIFYING TIME</label>
+        <div class="control">
+          <input
+            class="input"
+            type="time"
+            name="FINISH VERIFYING TIME"
+            placeholder="Finish Verifying Time"
+            required
+          />
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="subtitle">Pulling Material</h2>
+        </div>
+      </section>
+
+      <div id="pulling-material-section">
+        <div class="pulling-material-fields">
+          <div class="field">
+            <label class="label">R. MATERIAL PART #</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                name="R. MATERIAL PART #"
+                placeholder="Raw Material Part #"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">TYPE OF ISSUE</label>
+            <div class="control">
+              <select name="TYPE OF ISSUE" required>
+                <option value="No issue">No issue</option>
+                <option value="Short">Short</option>
+                <option value="Overpulled">Overpulled</option>
+                <option value="Missing">Missing</option>
+                <option value="Misidentified">Misidentified</option>
+                <option value="Damaged">Damaged</option>
+                <option value="Non-conformance">Non-conformance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">REQUIRED QTY</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                name="REQUIRED QTY"
+                placeholder="Required Quantity"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">PULLED QTY</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                name="PULLED QTY"
+                placeholder="Pulled Quantity"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">QTY (DIFF)</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                name="QTY (DIFF)"
+                placeholder="Quantity Difference"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">COMMENT</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                name="COMMENT"
+                placeholder="Comment on the issue"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-button-container" style="display: flex; gap: 10px;">
+        <div class="control">
+          <button type="button" class="button is-info" id="add-material-button">+</button>
+        </div>
+        <div class="control">
+          <button type="button" class="button is-danger" id="remove-material-button">-</button>
+        </div>
+      </div>
+      
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="submit" id="submit-button">
+            Submit
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-danger" type="reset">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+    ></div>
+    <script>
+    //   document.getElementById("form").addEventListener("submit", function (e) {
+    //     e.preventDefault(); // Prevent the default form submission
+    //     document.getElementById("message").textContent = "Submitting..";
+    //     document.getElementById("message").style.display = "block";
+    //     document.getElementById("submit-button").disabled = true;
+
+    //     // Collect general information data
+    //     var generalData = new FormData(this);
+
+    //     // Collect all pulling material sections
+    //     var materialSections = document.querySelectorAll('.pulling-material-fields');
+
+    //     // Number of material sections
+    //     var materialCount = materialSections.length;
+    //     generalData.append("materialCount", materialCount);
+
+    //     materialSections.forEach(function(section, index) {
+    //       // Create a new FormData object for each material section
+    //       var formData = new FormData();
+
+    //       // Append general data to formData
+    //       generalData.forEach((value, key) => {
+    //         formData.append(key, value);
+    //       });
+
+    //       // Append material-specific data with a unique index
+    //       section.querySelectorAll('input, select, textarea').forEach(function(input) {
+    //         formData.append(input.name + `_${index}`, input.value);
+    //       });
+
+    //       // Calculate QTY (DIFF)
+    //       var requiredQty = parseFloat(formData.get("REQUIRED QTY_" + index));
+    //       var pulledQty = parseFloat(formData.get("PULLED QTY_" + index));
+    //       var qtyDiff = requiredQty - pulledQty;
+    //       formData.set("QTY (DIFF)_" + index, qtyDiff);
+
+    //       // Prepare formDataString for submission
+    //       var keyValuePairs = [];
+    //       for (var pair of formData.entries()) {
+    //         keyValuePairs.push(pair[0] + "=" + encodeURIComponent(pair[1])); // Encode URI components to handle special characters
+    //       }
+    //       var formDataString = keyValuePairs.join("&");
+
+    //       // Send a POST request to your Google Apps Script
+    //       fetch(
+    //         "https://script.google.com/macros/s/AKfycbzdZM7iD6OsnXrYVUNLmm3z-VpUd53c-NIDCXcX5ey9soxZ65iMw_36mLTu4k_AKrjwXw/exec",
+    //         {
+    //           redirect: "follow",
+    //           method: "POST",
+    //           body: formDataString,
+    //           headers: {
+    //             "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+    //           },
+    //         }
+    //       )
+    //         .then(function (response) {
+    //           if (response.ok) {
+    //             document.getElementById("message").textContent =
+    //               "Data submitted successfully!";
+    //             document.getElementById("message").style.display = "block";
+    //             document.getElementById("message").style.backgroundColor = "green";
+    //             document.getElementById("message").style.color = "beige";
+    //           } else {
+    //             throw new Error("Failed to submit the form.");
+    //           }
+    //         })
+    //         .catch(function (error) {
+    //           console.error(error);
+    //           document.getElementById("message").textContent =
+    //             "An error occurred while submitting the form: " + error.message;
+    //           document.getElementById("message").style.display = "block";
+    //         });
+    //     });
+
+    //     document.getElementById("submit-button").disabled = false;
+    //     document.getElementById("form").reset();
+    //     setTimeout(function () {
+    //       document.getElementById("message").textContent = "";
+    //       document.getElementById("message").style.display = "none";
+    //     }, 2600);
+    //   });
+    
+    document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+
+        // Collect general information data
+        var generalData = new FormData(this);
+
+        // Collect all pulling material sections
+        var materialSections = document.querySelectorAll('.pulling-material-fields');
+
+        // Number of material sections
+        var materialCount = materialSections.length;
+
+        if (materialCount > 0) {
+            generalData.append("materialCount", materialCount);
+
+            materialSections.forEach(function (section, index) {
+                // Append material-specific data with a unique index
+                section.querySelectorAll('input, select, textarea').forEach(function (input) {
+                    generalData.append(input.name + `_${index}`, input.value);
+                });
+
+                // Calculate QTY (DIFF)
+                var requiredQty = parseFloat(generalData.get("REQUIRED QTY_" + index));
+                var pulledQty = parseFloat(generalData.get("PULLED QTY_" + index));
+                var qtyDiff = requiredQty - pulledQty;
+                generalData.set("QTY (DIFF)_" + index, qtyDiff);
+            });
+
+            // Prepare formDataString for submission
+            var keyValuePairs = [];
+            for (var pair of generalData.entries()) {
+                keyValuePairs.push(pair[0] + "=" + encodeURIComponent(pair[1])); // Encode URI components to handle special characters
+            }
+            var formDataString = keyValuePairs.join("&");
+
+            // Send a POST request to your Google Apps Script
+            fetch(
+                "https://script.google.com/macros/s/AKfycbzdZM7iD6OsnXrYVUNLmm3z-VpUd53c-NIDCXcX5ey9soxZ65iMw_36mLTu4k_AKrjwXw/exec",
+                {
+                    redirect: "follow",
+                    method: "POST",
+                    body: formDataString,
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                    },
+                }
+            )
+            .then(function (response) {
+                if (response.ok) {
+                    document.getElementById("message").textContent = "Data submitted successfully!";
+                    document.getElementById("message").style.display = "block";
+                    document.getElementById("message").style.backgroundColor = "green";
+                    document.getElementById("message").style.color = "beige";
+                } else {
+                    throw new Error("Failed to submit the form.");
+                }
+            })
+            .catch(function (error) {
+                console.error(error);
+                document.getElementById("message").textContent = "An error occurred while submitting the form: " + error.message;
+                document.getElementById("message").style.display = "block";
+            })
+            .finally(() => {
+                document.getElementById("submit-button").disabled = false;
+                document.getElementById("form").reset();
+                setTimeout(function () {
+                    document.getElementById("message").textContent = "";
+                    document.getElementById("message").style.display = "none";
+                }, 2600);
+            });
+        } else {
+            alert("Please add at least one material section.");
+            document.getElementById("submit-button").disabled = false;
+        }
+      });
+
+      document.getElementById("add-material-button").addEventListener("click", function () {
+        var newMaterialSection = document.createElement("div");
+        newMaterialSection.classList.add("pulling-material-fields");
+        newMaterialSection.innerHTML = `
+          <hr>
+          <div class="field">
+            <label class="label">R. MATERIAL PART #</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                name="R. MATERIAL PART #"
+                placeholder="Raw Material Part #"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">TYPE OF ISSUE</label>
+            <div class="control">
+              <select name="TYPE OF ISSUE" required>
+                <option value="Short">Short</option>
+                <option value="Overpulled">Overpulled</option>
+                <option value="Missing">Missing</option>
+                <option value="Misidentified">Misidentified</option>
+                <option value="Damaged">Damaged</option>
+                <option value="Non-conformance">Non-conformance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">REQUIRED QTY</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                name="REQUIRED QTY"
+                placeholder="Required Quantity"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">PULLED QTY</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                name="PULLED QTY"
+                placeholder="Pulled Quantity"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">QTY (DIFF)</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                name="QTY (DIFF)"
+                placeholder="Quantity Difference"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">COMMENT</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                name="COMMENT"
+                placeholder="Comment on the issue"
+              ></textarea>
+            </div>
+          </div>
+        `;
+        document.getElementById("pulling-material-section").appendChild(newMaterialSection);
+        // document.getElementById("pulling-material-section").appendChild(document.querySelector(".add-button-container"));
+      });
+
+      document.getElementById("remove-material-button").addEventListener("click", function () {
+        var materialSections = document.getElementById("pulling-material-section");
+        var lastSection = materialSections.querySelector(".pulling-material-fields:last-child");
+        if (lastSection) {
+          materialSections.removeChild(lastSection);
+        }
+      });
+
+    </script>
+
+  </body>
+</html>
